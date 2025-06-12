@@ -36,10 +36,10 @@ class Model(abc.ABC):
                     else:
                         providers = ["CPUExecutionProvider"]
                 # Suppress all the error messages from the missing providers.
-                with _contextlib.suppress():
-                    inference_session = onnxruntime.InferenceSession(
-                        blob.path, providers=providers
-                    )
+                # with _contextlib.suppress():
+                inference_session = onnxruntime.InferenceSession(
+                    blob.path, providers=providers
+                )
             except Exception as e:
                 # Even though there is fallback in onnxruntime, it won't always work.
                 # e.g., CUDA is installed and CUDA_PATH is set, but CUDA_VISIBLE_DEVICES
