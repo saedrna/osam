@@ -5,6 +5,12 @@ build-backend = "hatchling.build"
 [project.urls]
 Homepage = "https://github.com/wkentaro/osam"
 
+[tool.poetry]
+name = "your_project_name"
+version = "0.24.0"  # Update this version according to your needs
+description = "A description of your project."
+authors = ["Your Name <youremail@example.com>"]
+
 [project]
 name = "osam"
 description = "Get up and running vision foundational models locally."
